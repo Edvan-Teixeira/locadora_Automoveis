@@ -198,9 +198,9 @@ Acesse: [http://localhost:8000](http://localhost:8000)
 ## 🤝 Contribuindo
 
 1. Clone este repositório
-2. Crie uma branch com seu nome (`git checkout -b seu-nome`)
+2. Estando na branch main, crie uma branch com seu nome (`git checkout -b seu-nome`)
 3. Faça suas alterações e commite (`git commit -m 'Adiciona nova feature'`)
-4. Envie para a branch remota no github (`git push origin seu-nome`)
+4. Envie para a branch remota no github (`git push -u origin seu-nome`)
 5. Abra um Pull Request
 
 ---
