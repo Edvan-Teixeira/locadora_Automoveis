@@ -2,7 +2,7 @@
 
 Bem-vindo ao **Projeto Locadora de Automóveis**! 🏎️
 
-Este sistema, desenvolvido em **Laravel 12** com **PHP**, permite gerenciar o cadastro de veículos, usuários, clientes e locações. Cada veículo possui um custo diário de locação, que é calculado e registrado ao final da locação, teste.
+Este sistema, desenvolvido em **Laravel 12** com **PHP**, permite gerenciar o cadastro de veículos, usuários, clientes e locações. Cada veículo possui um custo diário de locação, que é calculado e registrado ao final da locação.
 
 ---
 
