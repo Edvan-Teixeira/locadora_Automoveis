@@ -45,4 +45,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function locacoes()
+    {
+        return $this->hasMany(Locacao::class, 'usuario_id');
+    }
 }
