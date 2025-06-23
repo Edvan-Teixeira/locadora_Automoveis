@@ -1,17 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthController;
-use App\Http\Controllers\Auth\RegisterController;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-
-Route::get('/teste', function () {
-    return view('pages.teste');
-})->name('teste');
-
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::middleware('guest')->group( function () {
     Route::get('/account/register', [AuthController::class, 'showRegistrationForm'])->name('register');
