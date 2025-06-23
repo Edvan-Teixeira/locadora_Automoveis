@@ -15,9 +15,9 @@ Route::get('/singIN', function () {
     return view('pages.singIN');
 })->name('singIN');
 
-Route::get('/cadasrto', function () {
-    return view('pages.cadastro');
-})->name('cadastro');
+Route::get('/cadasrtoCliente', function () {
+    return view('pages.cadastroCliente');
+})->name('cadastroCliente');
 
 Route::get('/welcome', function () {
     return view('welcome');
