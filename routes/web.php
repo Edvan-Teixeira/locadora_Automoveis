@@ -21,4 +21,4 @@ Route::get('/cadasrto', function () {
 
 Route::get('/welcome', function () {
     return view('welcome');
-});
+})->name('welcome');
