@@ -18,3 +18,14 @@ Route::middleware('auth')->group( function () {
 
     Route::get('/account/logout', [AuthController::class, 'logout'])->name('logout');
 });
+Route::get('/singIN', function () {
+    return view('pages.singIN');
+})->name('singIN');
+
+Route::get('/cadasrtoCliente', function () {
+    return view('pages.cadastroCliente');
+})->name('cadastroCliente');
+
+Route::get('/welcome', function () {
+    return view('welcome');
+})->name('welcome');

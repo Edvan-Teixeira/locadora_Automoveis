@@ -10,7 +10,7 @@
 
       <div class="col-md-3 text-end">
         <a href="{{ route('singIN') }}" class="btn btn-outline-primary me-2">Login</a>
-        <a href="{{ route('cadastro') }}" class="btn btn-primary">Cadastrar</a>
+        <a href="{{ route('cadastroCliente') }}" class="btn btn-primary">Cadastrar</a>
       </div>
     </header>
   </div>
