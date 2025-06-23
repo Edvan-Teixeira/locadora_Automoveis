@@ -5,6 +5,7 @@
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="{{ route('teste') }}">Teste</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ route('singIN') }}">SingIN</a></li>
       </ul>
     </nav>
   </div>
