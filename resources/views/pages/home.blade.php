@@ -21,7 +21,7 @@
                 <tr>   
                 <th></th>
                 <th></th>
-                <td>{{ $nome }}</td>
+                <td></td>
                 <th></th>
                 <th></th>
                 <th></th>

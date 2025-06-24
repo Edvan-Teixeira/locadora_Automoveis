@@ -18,7 +18,7 @@
             @foreach($nomes as $nome)
                 <tr>
                     <th></th>
-                    <td>{{ $nome }}</td>
+                    <td></td>
                     <th></th>
                     <th></th>
                     <th></th>
