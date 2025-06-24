@@ -2,7 +2,16 @@
 
 @section('content')
     <div class="container p-4">
-        <h1>Rota de Teste</h1>
-        <p>Este é um template Blade de teste usando a estrutura /layouts, /includes e /pages.</p>
+        <table class="table table-striped table-bordered">
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Data de Cadastro</th>
+            </tr>
+        <tbody>
+            
+        </tbody>
+    </table>
     </div>
 @endsection
