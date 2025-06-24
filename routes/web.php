@@ -10,6 +10,9 @@ Route::middleware('guest')->group( function () {
     Route::get('/account/login', [AuthController::class, 'showLoginForm'])->name('login');
     Route::post('/account/login', [AuthController::class, 'authenticate']);
 });
+Route::get('/home', function () {
+    return view('pages.home');
+})->name('home');
 
 Route::get('/clientes', function () {
     return view('pages.clientes');
@@ -18,6 +21,7 @@ Route::get('/clientes', function () {
     Route::get('/account/logout', [AuthController::class, 'logout'])->name('logout');
 });
 Route::get('/singIN', function () {
+Route::get('/', function () {
     return view('pages.singIN');
 })->name('singIN');
 
