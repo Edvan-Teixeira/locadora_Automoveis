@@ -15,6 +15,7 @@
         <label for="nome" class="form-label">Endereço</label>
         <input type="text" class="form-control" id="endereco" name="endereco" required />
       </div>
+      </div>
 
       <div class="row">
       <div class="col-6 mb-3">
