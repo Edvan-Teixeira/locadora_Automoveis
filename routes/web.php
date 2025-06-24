@@ -7,9 +7,9 @@ Route::get('/', function () {
     return view('pages.home');
 })->name('home');
 
-Route::get('/teste', function () {
-    return view('pages.teste');
-})->name('teste');
+Route::get('/clientes', function () {
+    return view('pages.clientes');
+})->name('clientes');
 
 Route::get('/singIN', function () {
     return view('pages.singIN');
