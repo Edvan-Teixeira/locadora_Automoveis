@@ -38,10 +38,6 @@
             </div>
             </div>
             </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input border border-primary" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
             <div class="mb-3">
             <button type="submit" class="btn btn-primary">Submit</button>
             </div>
