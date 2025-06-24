@@ -3,29 +3,30 @@
 @section('content')
 <div class="container mt-3">
         <div class="row g-3">
-            <div class="col-sm-6">
-              <label for="firstName" class="form-label">First name</label>
-              <input type="text" class="form-control border border-primary" id="firstName" placeholder="" value="" required>
-              <div class="invalid-feedback">
-                Valid first name is required.
-              </div>
+            <div class="col-sm-8">
+              <label for="Name" class="form-label">Nome Completo</label>
+              <input type="text" class="form-control border border-primary" id="Name" placeholder="" value="" required>
             </div>
 
-            <div class="col-sm-6">
-              <label for="lastName" class="form-label">Last name</label>
-              <input type="text" class="form-control border border-primary" id="lastName" placeholder="" value="" required>
-              <div class="invalid-feedback">
-                Valid last name is required.
-              </div>
-            </div>
-
-            <div class="col-12">
+            <div class="col-8">
               <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+              <input type="email" class="form-control border border-primary" id="email" placeholder="nome@email.com">
               <div class="invalid-feedback">
-                Please enter a valid email address for shipping updates.
+                Por favor, use um email válido.
               </div>
             </div>
+        <div class="row g-3">
+
+            <div class="col-sm-4">
+              <label for="cpf" class="form-label">CPF</label>
+              <input type="text" class="form-control border border-primary" id="cpf" placeholder="xxx.xxx.xxx-xx" required>
+            </div>
+
+            <div class="col-sm-4">
+              <label for="rg" class="form-label">RG</label>
+              <input type="text" class="form-control border border-primary" id="rg" placeholder="" value="" required>
+            </div>
+        </div>
 
             <div class="col-12">
               <label for="address" class="form-label">Address</label>
