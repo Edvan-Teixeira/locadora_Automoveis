@@ -14,6 +14,7 @@
     >
 
     @stack('styles')
+    @vite('resources/css/singIN.css')
 </head>
 <body>
 
