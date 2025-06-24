@@ -1,3 +1,4 @@
+
 html,
 body {
   height: 100%;
@@ -36,4 +37,20 @@ body {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+.form-label {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1c1c1c;
+  letter-spacing: 0.3px;
+}
+
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  font-size: 0.95rem;
+  padding: 10px;
+  transition: border-color 0.3s ease-in-out;
 }
