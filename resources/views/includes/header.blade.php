@@ -15,7 +15,7 @@
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
         <li><a href="{{ route('home') }}" class="nav-link px-2 link-secondary">Home</a></li>
         <li><a href="{{ route('clientes') }}" class="nav-link px-2 link-dark">Clientes</a></li>
-        <li><a href="{{ route('cadastroCliente') }}" class="nav-link px-2 link-dark">Cadastros</a></li>
+        <li><a href="{{ route('cadastroCliente') }}" class="nav-link px-2 link-dark">Cadastro Cliente</a></li>
       </ul>
       <div class="dropdown text-end">
           <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
