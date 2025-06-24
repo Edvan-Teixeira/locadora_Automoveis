@@ -117,5 +117,5 @@
       div.innerHTML = `<div class="alert alert-${tipo}">${texto}</div>`;
     }
   </script>
-    </div>
+</div>
 @endsection

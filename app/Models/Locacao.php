@@ -17,6 +17,14 @@ class Locacao extends Model
         'valor_total'
     ];
 
+    // app/Models/Locacao.php
+
+    protected $casts = [
+        'data_inicio' => 'date',
+        'data_fim' => 'date',
+    ];
+
+
     public function veiculo()
     {
         return $this->belongsTo(Veiculo::class, 'veiculo_id');
@@ -27,9 +35,8 @@ class Locacao extends Model
         return $this->belongsTo(Cliente::class, 'cliente_id');
     }
 
-    public function usuario()
+    public function user()
     {
         return $this->belongsTo(User::class, 'usuario_id');
     }
 }
-

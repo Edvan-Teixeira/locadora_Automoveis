@@ -16,15 +16,19 @@ class Cliente extends Model
         'data_nascimento',
         'genero',
         'cnh',
-        'endereco_id',
         'telefone',
         'celular',
+        'logradouro',
+        'numero',
+        'bairro',
+        'cidade',
+        'estado',
+        'cep',
     ];
 
-    public function endereco()
-    {
-        return $this->belongsTo(Endereco::class, 'endereco_id');
-    }
+    protected $casts = [
+        'data_nascimento' => 'date',
+    ];
 
     public function locacoes()
     {

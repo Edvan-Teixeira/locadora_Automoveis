@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,21 +17,21 @@
     @vite('resources/css/singIN.css')
 </head>
 <body>
+  <div class="container py-4">
 
-    @include('includes.header')
+    @auth
+        @include('includes.header')
+    @endauth
 
     <div class="container py-4">
         @yield('content')
     </div>
 
-    @include('includes.footer')
+    @auth
+        @include('includes.footer')
+    @endauth
+  </div>
 
-    <!-- Bootstrap JS (via CDN) -->
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-        crossorigin="anonymous"
-    ></script>
-    @stack('scripts')
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.x/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
