@@ -3,7 +3,7 @@
 @section('content')
 <div class="container mt-1">
 <div class="container mt-1" style="max-width: 520px; background-color: #ffffff; padding: 35px; border-radius: 14px; box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);">
-    <h3>Cadastro de Automóvel</h3>
+    <h3 class="mb-4">Cadastro de Automóvel</h3>
     <form id="formAutomovel">
     <div class="row">
       <div class="col-8 mb-3">

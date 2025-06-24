@@ -23,6 +23,10 @@ Route::get('/cadasrtoCarros', function () {
     return view('pages.cadastroCarros');
 })->name('cadastroCarros');
 
+Route::get('/locacoes', function () {
+    return view('pages.locacoes');
+})->name('locacoes');
+
 Route::get('/welcome', function () {
     return view('welcome');
 })->name('welcome');

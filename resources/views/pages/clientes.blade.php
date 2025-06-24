@@ -14,6 +14,7 @@
                 <th>Celular</th>
             </tr>
         <tbody>
+            <!--Teste da tabela-->
             @foreach($nomes as $nome)
                 <tr>
                     <th>ID</th>
