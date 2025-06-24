@@ -9,6 +9,7 @@
         <li><a href="{{ route('clientes') }}" class="nav-link px-2 link-dark">Clientes</a></li>
         <li><a href="{{ route('locacoes') }}" class="nav-link px-2 link-dark">Locações</a></li>
         <li><a href="{{ route('cadastroCliente') }}" class="nav-link px-2 link-dark">Cadastro Cliente</a></li>
+        <li><a href="{{ route('cadastroUsuario') }}" class="nav-link px-2 link-dark">Cadastro Usuário</a></li>
         <li><a href="{{ route('cadastroCarros') }}" class="nav-link px-2 link-dark">Cadastro Carros</a></li>
       </ul>
       <div class="dropdown text-end">

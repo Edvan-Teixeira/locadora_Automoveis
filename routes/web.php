@@ -19,6 +19,10 @@ Route::get('/cadasrtoCliente', function () {
     return view('pages.cadastroCliente');
 })->name('cadastroCliente');
 
+Route::get('/cadastroUsuario', function () {
+    return view('pages.cadastroUsuario');
+})->name('cadastroUsuario');
+
 Route::get('/cadasrtoCarros', function () {
     return view('pages.cadastroCarros');
 })->name('cadastroCarros');
