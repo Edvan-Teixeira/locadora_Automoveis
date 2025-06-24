@@ -16,20 +16,7 @@ Route::middleware('guest')->group( function () {
     Route::get('/account/login', [AuthController::class, 'showLoginForm'])->name('login');
     Route::post('/account/login', [AuthController::class, 'authenticate']);
 });
-Route::get('/home', function () {
-    return view('pages.home');
-})->name('home');
 
-Route::get('/clientes', function () {
-    return view('pages.clientes');
-})->name('clientes');
-
-    Route::get('/account/logout', [AuthController::class, 'logout'])->name('logout');
-});
-Route::get('/singIN', function () {
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
 Route::middleware('guest')->group(function () {
     Route::get('/', function () {
         return view('landing');
@@ -48,7 +35,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/account/logout', [AuthController::class, 'logout'])->name('logout');
 
     Route::get('/financeiro', [FinanceiroController::class, 'index'])->name('financeiro');
-
 
     Route::get('/veiculos', [VeiculoController::class, 'index'])->name('veiculos');
     Route::get('/veiculos/cadastro', [VeiculoController::class, 'create'])->name('veiculos.cadastro');
@@ -73,4 +59,5 @@ Route::middleware('auth')->group(function () {
     Route::get('/locacoes/{locacao}/edit', [LocacaoController::class, 'edit'])->name('locacoes.edit');
     Route::put('/locacoes/{locacao}', [LocacaoController::class, 'update'])->name('locacoes.update');
     Route::delete('/locacoes/{locacao}', [LocacaoController::class, 'destroy'])->name('locacoes.destroy');
+
 });
