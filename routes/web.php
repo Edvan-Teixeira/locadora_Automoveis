@@ -11,10 +11,9 @@ Route::middleware('guest')->group( function () {
     Route::post('/account/login', [AuthController::class, 'authenticate']);
 });
 
-Route::middleware('auth')->group( function () {
-    Route::get('/home', function () {
-        return view('pages.home');
-    })->name('home');
+Route::get('/clientes', function () {
+    return view('pages.clientes');
+})->name('clientes');
 
     Route::get('/account/logout', [AuthController::class, 'logout'])->name('logout');
 });
