@@ -19,13 +19,13 @@
             <!--Teste da tabela-->
             @foreach($nomes as $nome)
                 <tr>   
-                <th>ID</th>
-                <th>Veículo</th>
+                <th></th>
+                <th></th>
                 <td>{{ $nome }}</td>
-                <th>Cliente</th>
-                <th>Data_Inicio</th>
-                <th>Data_Fim</th>
-                <th>Valor_Total</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
                 </tr>
             @endforeach
         </tbody>

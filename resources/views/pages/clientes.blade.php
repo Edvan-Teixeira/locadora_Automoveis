@@ -17,11 +17,11 @@
             <!--Teste da tabela-->
             @foreach($nomes as $nome)
                 <tr>
-                    <th>ID</th>
+                    <th></th>
                     <td>{{ $nome }}</td>
-                    <th>Email</th>
-                    <th>CPF</th>
-                    <th>Celular</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
                 </tr>
             @endforeach
         </tbody>
