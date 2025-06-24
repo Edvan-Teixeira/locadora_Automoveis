@@ -2,45 +2,73 @@
 
 @section('content')
 <div class="container mt-3">
-        <form>
-            <div class="row">
-            <div class="col-6">
-            <div class="mb-3">
-                <label for="nomeFor" class="col-form-label">Nome</label>
-                <p class="border border-primary">
-                    <input type="nome" class="form-control" id="nomeFor" aria-describedby="nomeHelp">
-                </p>
+        <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">First name</label>
+              <input type="text" class="form-control border border-primary" id="firstName" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Valid first name is required.
+              </div>
             </div>
+
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">Last name</label>
+              <input type="text" class="form-control border border-primary" id="lastName" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Valid last name is required.
+              </div>
             </div>
-            <div class="col-6">
-            <div class="mb-3">
-                <label for="sobrenomeFor" class="col-form-label">Sobrenome</label>
-                <p class="border border-primary">
-                    <input type="sobrenome" class="form-control" id="sobrenomeFor" aria-describedby="sobrenomeHelp">
-                </p>
+
+            <div class="col-12">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+              <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+              </div>
             </div>
+
+            <div class="col-12">
+              <label for="address" class="form-label">Address</label>
+              <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+              <div class="invalid-feedback">
+                Please enter your shipping address.
+              </div>
             </div>
-            <div class="col-8">
-            <div class="mb-3">
-                <label for="InputEmail1" class="col-form-label">Email</label>
-                <p class="border border-primary">
-                    <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp">
-                </p>
-                    <div id="emailHelp" class="form-text">Email não será revelado.</div>
+
+            <div class="col-12">
+              <label for="address2" class="form-label">Address 2 <span class="text-muted">(Optional)</span></label>
+              <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
             </div>
+
+            <div class="col-md-5">
+              <label for="country" class="form-label">Country</label>
+              <select class="form-select" id="country" required>
+                <option value="">Choose...</option>
+                <option>United States</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid country.
+              </div>
             </div>
-            <div class="col-4">
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="col-form-label">Senha</label>
-                <p class="border border-primary">
-                    <input type="password" class="form-control" id="exampleInputPassword1">
-                </p>
+
+            <div class="col-md-4">
+              <label for="state" class="form-label">State</label>
+              <select class="form-select" id="state" required>
+                <option value="">Choose...</option>
+                <option>California</option>
+              </select>
+              <div class="invalid-feedback">
+                Please provide a valid state.
+              </div>
             </div>
+
+            <div class="col-md-3">
+              <label for="zip" class="form-label">Zip</label>
+              <input type="text" class="form-control" id="zip" placeholder="" required>
+              <div class="invalid-feedback">
+                Zip code required.
+              </div>
             </div>
-            </div>
-            <div class="mb-3">
-            <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-        </form>
+          </div>
     </div>
 @endsection
