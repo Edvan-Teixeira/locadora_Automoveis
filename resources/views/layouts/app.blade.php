@@ -1,36 +1,42 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Locadora de Automóveis')</title>
-
-    <!-- Bootstrap CSS (via CDN) -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
-        crossorigin="anonymous"
-    >
-
-    @stack('styles')
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.x/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>@yield('title','Meu App')</title>
 </head>
 <body>
+  <div class="container py-4">
 
-    @include('includes.header')
+    {{-- Sucesso e erro genérico --}}
+    @if(session('success_message'))
+      <div class="alert alert-success alert-dismissible fade show">
+        {{ session('success_message') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+      </div>
+    @endif
+
+    @if(session('error_message'))
+      <div class="alert alert-danger alert-dismissible fade show">
+        {{ session('error_message') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+      </div>
+    @endif
+
+    @auth
+        @include('includes.header')
+    @endauth
 
     <div class="container py-4">
         @yield('content')
     </div>
 
-    @include('includes.footer')
+    @auth
+        @include('includes.footer')
+    @endauth
+  </div>
 
-    <!-- Bootstrap JS (via CDN) -->
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-        crossorigin="anonymous"
-    ></script>
-    @stack('scripts')
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.x/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
