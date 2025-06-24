@@ -1,0 +1,81 @@
+/* Fundo geral da página */
+body {
+  background-color: #f0f7fd; /* tom azul acinzentado mais automotivo */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Título da página */
+h2 {
+  color: #0a4275;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Container principal */
+.container {
+  max-width: 540px;
+  background-color: #ffffff;
+  padding: 35px;
+  border-radius: 14px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Rótulos */
+.form-label {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1f1f1f;
+  letter-spacing: 0.4px;
+}
+
+/* Campos de formulário (inclui custo de locação) */
+.form-control, .form-select {
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  font-size: 0.95rem;
+  padding: 10px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #0a4275;
+  box-shadow: 0 0 0 0.2rem rgba(10, 66, 117, 0.25);
+}
+
+/* Botão */
+.btn-primary {
+  background-color: #0a4275;
+  border-color: #093860;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  padding: 10px 24px;
+}
+
+.btn-primary:hover {
+  background-color: #082f4c;
+  border-color: #072a44;
+}
+
+/* Mensagens de alerta */
+.alert {
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* Ajustes responsivos opcionais */
+@media (max-width: 576px) {
+  .container {
+    padding: 25px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+}
