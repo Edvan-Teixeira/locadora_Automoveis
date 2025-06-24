@@ -69,7 +69,7 @@ class AuthController extends Controller
         if(Auth::attempt($credentials, $remember)) {
             // 4 - redirecionar a pagina de home
             $request->session()->regenerate();
-            return redirect()->intended('/home');
+            return redirect()->intended('/');
         }
 
         return back()

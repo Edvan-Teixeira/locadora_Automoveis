@@ -9,21 +9,6 @@
 <body>
   <div class="container py-4">
 
-    {{-- Sucesso e erro genérico --}}
-    @if(session('success_message'))
-      <div class="alert alert-success alert-dismissible fade show">
-        {{ session('success_message') }}
-        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-      </div>
-    @endif
-
-    @if(session('error_message'))
-      <div class="alert alert-danger alert-dismissible fade show">
-        {{ session('error_message') }}
-        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-      </div>
-    @endif
-
     @auth
         @include('includes.header')
     @endauth

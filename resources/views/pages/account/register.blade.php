@@ -3,78 +3,88 @@
 @section('title','Cadastro')
 
 @section('content')
-<div class="row justify-content-center">
-  <div class="col-md-6">
-    <h2 class="mb-4">Criar Conta</h2>
-    <form action="{{ route('register') }}" method="POST" novalidate>
-      @csrf
+<main class="form-signin d-flex align-items-center justify-content-center" style="min-height: 80vh;">
+  <form action="{{ route('register') }}" method="POST" novalidate class="text-center w-100" style="max-width: 360px;">
+    @csrf
 
-      {{-- Nome --}}
-      <div class="mb-3">
-        <label for="name" class="form-label">Nome</label>
-        <input
-          type="text"
-          name="name"
-          id="name"
-          value="{{ old('name') }}"
-          class="form-control @error('name') is-invalid @enderror"
-        >
-        @error('name')
-          <div class="invalid-feedback">
-            {{ $message }}
-          </div>
-        @enderror
-      </div>
+    {{-- Logo ou ícone --}}
+    <img class="mb-4" src="{{ asset('images/car2.png') }}" alt="Logo" width="140" height="57">
 
-      {{-- Email --}}
-      <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          value="{{ old('email') }}"
-          class="form-control @error('email') is-invalid @enderror"
-        >
-        @error('email')
-          <div class="invalid-feedback">
-            {{ $message }}
-          </div>
-        @enderror
-      </div>
+    <h1 class="h3 mb-3 fw-normal">Criar Conta</h1>
 
-      {{-- Senha --}}
-      <div class="mb-3">
-        <label for="password" class="form-label">Senha</label>
-        <input
-          type="password"
-          name="password"
-          id="password"
-          class="form-control @error('password') is-invalid @enderror"
-        >
-        @error('password')
-          <div class="invalid-feedback">
-            {{ $message }}
-          </div>
-        @enderror
-      </div>
+    {{-- Nome --}}
+    <div class="form-floating mb-2 text-start">
+      <input
+        type="text"
+        name="name"
+        id="floatingName"
+        placeholder="Nome"
+        value="{{ old('name') }}"
+        class="form-control @error('name') is-invalid @enderror"
+      >
+      <label for="floatingName">Nome</label>
+      @error('name')
+        <div class="invalid-feedback">
+          {{ $message }}
+        </div>
+      @enderror
+    </div>
 
-      {{-- Confirmação de Senha --}}
-      <div class="mb-4">
-        <label for="password_confirmation" class="form-label">Confirmar Senha</label>
-        <input
-          type="password"
-          name="password_confirmation"
-          id="password_confirmation"
-          class="form-control"
-        >
-      </div>
+    {{-- Email --}}
+    <div class="form-floating mb-2 text-start">
+      <input
+        type="email"
+        name="email"
+        id="floatingEmail"
+        placeholder="name@example.com"
+        value="{{ old('email') }}"
+        class="form-control @error('email') is-invalid @enderror"
+      >
+      <label for="floatingEmail">Email</label>
+      @error('email')
+        <div class="invalid-feedback">
+          {{ $message }}
+        </div>
+      @enderror
+    </div>
 
-      <button type="submit" class="btn btn-primary w-100">Cadastrar</button>
-      <p class="mt-3 text-center">
-        Já tem conta? <a href="{{ route('login') }}">Entrar</a>
-      </p>
-    </form>
-  </div>
-</div>
+    {{-- Senha --}}
+    <div class="form-floating mb-2 text-start">
+      <input
+        type="password"
+        name="password"
+        id="floatingPassword"
+        placeholder="Senha"
+        class="form-control @error('password') is-invalid @enderror"
+      >
+      <label for="floatingPassword">Senha</label>
+      @error('password')
+        <div class="invalid-feedback">
+          {{ $message }}
+        </div>
+      @enderror
+    </div>
+
+    {{-- Confirmação de Senha --}}
+    <div class="form-floating mb-3 text-start">
+      <input
+        type="password"
+        name="password_confirmation"
+        id="floatingPasswordConfirm"
+        placeholder="Confirmar Senha"
+        class="form-control"
+      >
+      <label for="floatingPasswordConfirm">Confirmar Senha</label>
+    </div>
+
+    {{-- Botão --}}
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Cadastrar</button>
+
+    <p class="mt-3">
+      Já tem conta? <a href="{{ route('login') }}">Entrar</a>
+    </p>
+
+    <p class="mt-5 mb-3 text-muted">&copy;{{ date('Y') }}</p>
+  </form>
+</main>
 @endsection

@@ -20,9 +20,14 @@ return new class extends Migration
             $table->date('data_nascimento');
             $table->enum('genero', ['M', 'F'])->nullable();
             $table->string('cnh')->unique();
-            $table->foreignId('endereco_id')->constrained('enderecos')->onDelete('cascade');
-            $table->string('telefone')->nullable();
+            $table->string('telefone');
             $table->string('celular')->nullable();
+            $table->string('logradouro')->after('cnh');
+            $table->string('numero')->nullable()->after('logradouro');
+            $table->string('bairro')->nullable()->after('numero');
+            $table->string('cidade')->after('bairro');
+            $table->string('estado', 2)->after('cidade');
+            $table->string('cep', 9)->after('estado');
             $table->timestamps();
         });
     }

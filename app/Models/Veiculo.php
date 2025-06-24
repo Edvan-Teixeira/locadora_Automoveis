@@ -13,6 +13,8 @@ class Veiculo extends Model
         'modelo',
         'ano',
         'placa',
+        'cor',
+        'imagem',
         'valor_diaria'
     ];
 

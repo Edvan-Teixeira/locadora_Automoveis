@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('modelo');
             $table->year('ano');
             $table->string('placa')->unique();
+            $table->string('cor');
+            $table->string('imagem')->nullable();
             $table->decimal('valor_diaria', 8, 2);
             $table->timestamps();
         });
