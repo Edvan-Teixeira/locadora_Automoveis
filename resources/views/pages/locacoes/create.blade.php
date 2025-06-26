@@ -24,8 +24,8 @@
                 <label for="cliente_id" class="form-label">Cliente</label>
                 <select name="cliente_id" id="cliente_id" class="form-select @error('cliente_id') is-invalid @enderror" required>
                     <option value="" disabled selected>Selecione o cliente</option>
-                    @foreach($clientes as $id => $nome)
-                        <option value="{{ $id }}" {{ old('cliente_id') == $id ? 'selected' : '' }}>{{ $nome }}</option>
+                    @foreach($clientes as $cliente)
+                        <option value="{{ $cliente->id }}" {{ old('cliente_id') == $cliente->id ? 'selected' : '' }}>{{ $cliente->nome }}</option>
                     @endforeach
                 </select>
                 @error('cliente_id')<div class="invalid-feedback">{{ $message }}</div>@enderror
@@ -35,8 +35,8 @@
                 <label for="veiculo_id" class="form-label">Veículo</label>
                 <select name="veiculo_id" id="veiculo_id" class="form-select @error('veiculo_id') is-invalid @enderror" required>
                     <option value="" disabled selected>Selecione o veículo</option>
-                    @foreach($veiculos as $id => $modelo)
-                        <option value="{{ $id }}" {{ old('veiculo_id') == $id ? 'selected' : '' }}>{{ $modelo }}</option>
+                    @foreach($veiculos as $veiculo)
+                        <option value="{{ $veiculo->id }}" {{ old('veiculo_id') == $veiculo->id ? 'selected' : '' }}>{{ $veiculo->modelo }}</option>
                     @endforeach
                 </select>
                 @error('veiculo_id')<div class="invalid-feedback">{{ $message }}</div>@enderror
@@ -46,8 +46,8 @@
                 <label for="user_id" class="form-label">Usuário</label>
                 <select name="user_id" id="user_id" class="form-select @error('user_id') is-invalid @enderror" required>
                     <option value="" disabled selected>Selecione o usuário</option>
-                    @foreach($users as $id => $name)
-                        <option value="{{ $id }}" {{ old('user_id') == $id ? 'selected' : '' }}>{{ $name }}</option>
+                    @foreach($users as $nome)
+                        <option value="{{ $nome->id }}" {{ old('user_id') == $nome->id ? 'selected' : '' }}>{{ $nome->name }}</option>
                     @endforeach
                 </select>
                 @error('user_id')<div class="invalid-feedback">{{ $message }}</div>@enderror
