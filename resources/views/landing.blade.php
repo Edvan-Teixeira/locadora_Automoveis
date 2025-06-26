@@ -36,7 +36,7 @@
   <div class="split left">
     <div class="left-content text-center">
       <h2 class="fw-bold">Bem-vindo</h2>
-      <p class="px-3" style="max-width: 16rem;">Subtítulo aqui.</p>
+      <p class="px-3" style="max-width: 16rem;"></p>
     </div>
   </div>
 
