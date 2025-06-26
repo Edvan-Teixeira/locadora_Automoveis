@@ -51,7 +51,7 @@ Antes de iniciar, verifique se sua máquina possui as seguintes ferramentas:
 
 Abra um cmd e powershell (windows) ou terminal (linux/mac) para fazer as instalações a seguir
 
-> Algumas etapas podem ser feitas manulmente, como criação de arquivos e ações de copiar e colar
+> Algumas etapas podem ser feitas manulamente, como criação de arquivos e ações de copiar e colar
 
 > Baseado na [documentação oficial do Laravel 12](https://laravel.com/docs/12.x#creating-a-laravel-project).
 
@@ -113,8 +113,8 @@ Para começar a desenvolver, basta clonar este repositório em sua máquina loca
 ```bash
 git clone https://github.com/Edvan-Teixeira/locadora_Automoveis.git
 
-# Não esqueça de entrar no diretorio recem criado, pois os proximos passos devem ser executados na raiz do projeto
-cd locadora-Automoveis
+# Não esqueça de entrar no diretorio recem criado, pois os próximos passos devem ser executados na raiz do projeto
+ddcd locadora-Automoveis
 ```
 
 ---
@@ -123,8 +123,8 @@ cd locadora-Automoveis
 
 1. **Copie o arquivo de ambiente**
 
-   Crie um arquivo .env na raiz do projeto. Copie o conteudo de .env.example e
-cole no arquivo .env. Ou se preferir execute:
+   Crie um arquivo .env na raiz do projeto. Copie o conteudo de .env.example e cole no arquivo .env. Ou se preferir execute:
+
    ```powershell
    # linux e mac
    cp .env.example .env
@@ -183,11 +183,79 @@ cole no arquivo .env. Ou se preferir execute:
 
 ---
 
+## 📁 Configuração de Upload de Arquivos
+
+Para garantir que o upload de arquivos funcione corretamente em diferentes sistemas operacionais, siga as instruções abaixo:
+
+1. **Crie o link simbólico para a pasta de storage**
+
+   * Execute o comando padrão do Laravel para criar o link simbólico:
+
+     ```bash
+     php artisan storage:link
+     ```
+
+2. **Defina permissões de pasta**
+
+   * **Linux** (usuários de distribuições baseadas em Debian/Ubuntu, CentOS, etc.):
+
+     ```bash
+     sudo chown -R www-data:www-data storage bootstrap/cache
+     sudo chmod -R 775 storage bootstrap/cache
+     ```
+
+   * **macOS**:
+
+     ```bash
+     sudo chown -R _www:_www storage bootstrap/cache
+     sudo chmod -R 775 storage bootstrap/cache
+     ```
+
+   * **Windows** (PowerShell como Administrador):
+
+     ```powershell
+     # Defina permissões para o IIS_IUSRS ou seu usuário atual
+     icacls storage /grant IIS_IUSRS:(OI)(CI)F /T
+     icacls bootstrap\cache /grant IIS_IUSRS:(OI)(CI)F /T
+     ```
+
+3. **Verifique a configuração de PHP**
+
+   * Certifique-se de que as configurações `file_uploads`, `upload_max_filesize` e `post_max_size` estejam ajustadas no `php.ini`:
+
+     ```ini
+     file_uploads = On
+     upload_max_filesize = 10M
+     post_max_size = 12M
+     ```
+   * Reinicie o servidor web (Apache, Nginx ou `php artisan serve`).
+
+4. **Testando o upload**
+
+   * Acesse a funcionalidade de upload no sistema e faça um teste com um arquivo pequeno (por exemplo, imagem JPEG de 50KB) para garantir que tudo esteja funcionando.
+
+> Essas configurações garantem que a pasta de armazenamento seja acessível ao servidor e que as limitações de upload estejam adequadas ao funcionamento do sistema.
+
+---
+
+## 🧪 Usuário de Teste
+
+Para facilitar o desenvolvimento e testes, o projeto já inclui a criação de um usuário padrão:
+
+**Credenciais de acesso:**
+
+* **Email:** `teste@teste.com`
+* **Senha:** `12345678`
+
+---
+
 ## ▶️ Executando a Aplicação
 
 Após seguir os passos acima, execute o servidor local do Laravel:
 
 ```bash
+composer run dev
+# ou
 php artisan serve
 ```
 
@@ -211,4 +279,4 @@ Este projeto está licenciado sob a MIT License - veja o arquivo [LICENSE](LICEN
 
 ---
 
-> Desenvolvido com ❤️ por **Equipe {Nome da Equipe}**
+> Desenvolvido com ❤️ por **Equipe 02**
