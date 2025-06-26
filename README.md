@@ -273,6 +273,14 @@ Acesse: [http://localhost:8000](http://localhost:8000)
 
 ---
 
+## 📚 Tutoriais
+
+Para auxiliar no aprendizado e no desenvolvimento, disponibilizamos dois tutoriais:
+
+* **[Fluxo de Desenvolvimento no Laravel e Arquitetura MVC](conceitos_laravel.md)**: passo a passo de criação de migrations, models, controllers, rotas, views, seeders e middlewares, seguindo o padrão MVC. 
+* **[Tutorial de Blade Templates](blade_templates.md)**: introdução ao motor de templates Blade para quem conhece apenas HTML e Bootstrap, cobrindo diretivas, herança de layouts, componentes, sintaxe e integração com CSS/JS.
+---
+
 ## 📝 Licença
 
 Este projeto está licenciado sob a MIT License - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
