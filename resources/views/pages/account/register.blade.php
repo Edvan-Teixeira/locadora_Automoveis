@@ -83,6 +83,7 @@
     <p class="mt-3">
       Já tem conta? <a href="{{ route('login') }}">Entrar</a>
     </p>
+    <a href="{{ route('landing') }}">Voltar</a>
 
     <p class="mt-5 mb-3 text-muted">&copy;{{ date('Y') }}</p>
   </form>
