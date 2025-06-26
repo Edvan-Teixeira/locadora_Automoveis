@@ -68,6 +68,7 @@
         </div>
 
         <button type="submit" class="btn btn-primary">Cadastrar</button>
+        <a href="{{ route('veiculos') }}" class="btn btn-link">Cancelar</a>
     </form>
 </div>
 @endsection
